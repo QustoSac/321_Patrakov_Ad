@@ -1,0 +1,32 @@
+﻿<Page x:Class="_321_Patrakov_Ad.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_321_Patrakov_Ad.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="1200"
+      Title="AuthPage">
+
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Логин" Style="{StaticResource HeaderTextStyle}" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Text="Пароль" Style="{StaticResource HeaderTextStyle}" VerticalAlignment="Center" Margin="5" Grid.Row="1"/>
+
+        <TextBox x:Name="LoginTextBox" Text="Введите логин" Style="{StaticResource LargeTextBoxStyle}" ToolTip="Поле ввода логина" Grid.Column="1" Margin="5"/>
+        <PasswordBox x:Name="PasswordBox"  ToolTip="Поле ввода пароля" Grid.Row="1" Grid.Column="1" Margin="5" Style="{StaticResource LargePassBoxStyle}"/>
+
+        <Button  Width="150" Margin="5" Click="LoginButton_Click" Content="Вход" Style="{StaticResource AccentStyle}" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" />
+    </Grid>
+</Page>

@@ -1,5 +1,4 @@
-﻿using _321_Patrakov_Ad;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
@@ -9,6 +8,8 @@ namespace _321_Patrakov_Ad.Pages
 {
     public partial class AdsPage : Page
     {
+        private Users currentUser;
+
         public AdsPage()
         {
             InitializeComponent();
@@ -108,6 +109,23 @@ namespace _321_Patrakov_Ad.Pages
             StatusBox.SelectedIndex = 0;
 
             UpdateAds();
+        }
+
+        private void AuthButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new AuthPage());
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new ProfilePage(currentUser));
+        }
+
+        public void SetAuthenticatedUser(Users user)
+        {
+            currentUser = user;
+            AuthButton.Visibility = Visibility.Collapsed;
+            ProfileButton.Visibility = Visibility.Visible;
         }
     }
 }

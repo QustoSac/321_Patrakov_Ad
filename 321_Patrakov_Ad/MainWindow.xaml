@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <Button x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Center"
                 Margin="10,0,0,0" Grid.Row="0" Click="BackButton_Click" ToolTip="Нажмите чтобы вернуться назад"
-                Style="{StaticResource MediumButtonStyle}"/>
+                Style="{StaticResource LargeButtonStyle}"/>
         <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Source="Pages/AdsPage.xaml" Navigated="MainFrame_Navigated"/>
     </Grid>
 </Window>

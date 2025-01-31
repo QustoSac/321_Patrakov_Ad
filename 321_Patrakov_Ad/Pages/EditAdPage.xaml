@@ -1,0 +1,51 @@
+﻿<Page x:Class="_321_Patrakov_Ad.Pages.EditAdPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:_321_Patrakov_Ad.Pages"
+      mc:Ignorable="d"
+      d:DesignHeight="550" d:DesignWidth="1200"
+      Title="EditAdPage">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Название:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TitleTextBox" Grid.Row="0" Grid.Column="1" Margin="5" Style="{StaticResource LargeTextBoxStyle}"/>
+
+        <TextBlock Text="Описание:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="DescriptionTextBox" Grid.Row="1" Grid.Column="1" Margin="5" Style="{StaticResource LargeTextBoxStyle}" AcceptsReturn="True" Height="100" VerticalScrollBarVisibility="Auto"/>
+
+        <TextBlock Text="Стоимость:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="CostTextBox" Grid.Row="2" Grid.Column="1" Margin="5" Style="{StaticResource LargeTextBoxStyle}"/>
+
+        <TextBlock Text="Город:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <ComboBox x:Name="CityComboBox" Grid.Row="3" Grid.Column="1" Margin="5" Style="{StaticResource LargeComboBoxStyle}" SelectionChanged="CityComboBox_SelectionChanged"/>
+
+        <TextBlock Text="Категория:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <ComboBox x:Name="CategoryComboBox" Grid.Row="4" Grid.Column="1" Margin="5" Style="{StaticResource LargeComboBoxStyle}" SelectionChanged="CategoryComboBox_SelectionChanged"/>
+
+        <TextBlock Text="Тип:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <ComboBox x:Name="TypeComboBox" Grid.Row="5" Grid.Column="1" Margin="5" Style="{StaticResource LargeComboBoxStyle}" SelectionChanged="TypeComboBox_SelectionChanged"/>
+
+        <TextBlock Text="Статус:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <ComboBox x:Name="StatusComboBox" Grid.Row="6" Grid.Column="1" Margin="5" Style="{StaticResource LargeComboBoxStyle}" SelectionChanged="StatusComboBox_SelectionChanged"/>
+
+        <Button Content="Сохранить" Grid.Row="7" Grid.Column="1" Margin="5" Click="SaveAdButton_Click" Style="{StaticResource AccentStyle}" HorizontalAlignment="Right"/>
+    </Grid>
+</Page>

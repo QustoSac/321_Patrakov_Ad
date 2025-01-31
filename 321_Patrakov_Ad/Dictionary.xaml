@@ -76,6 +76,14 @@
         <Setter Property="FontSize" Value="14" />
     </Style>
 
+    <Style x:Key="LargePassBoxStyle" TargetType="PasswordBox">
+        <Setter Property="Height" Value="38" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Margin" Value="16" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
     <Style x:Key="SmallComboBoxStyle" TargetType="ComboBox">
         <Setter Property="Height" Value="22" />
         <Setter Property="Padding" Value="10" />
@@ -101,6 +109,11 @@
     </Style>
 
     <Style x:Key="AccentStyle" TargetType="Control">
+        <Setter Property="Height" Value="38" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Margin" Value="16" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
         <Setter Property="Background" Value="{StaticResource AccentBrush}" />
         <Setter Property="Foreground" Value="{StaticResource BackgroundBrush}" />
     </Style>
